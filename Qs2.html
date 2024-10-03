@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Students</title>
+</head>
+<body>
+    <h1>Grade Students Based on Scores</h1>
+    
+    <script>
+        // Qs2: Function to assign grades based on scores
+        function getGrade(score) {
+            if (score >= 80 && score <= 100) {
+                return 'A';
+            } else if (score >= 70 && score < 80) {
+                return 'B';
+            } else if (score >= 60 && score < 70) {
+                return 'C';
+            } else if (score >= 50 && score < 60) {
+                return 'D';
+            } else if (score >= 0 && score < 50) {
+                return 'F';
+            } else {
+                return 'Invalid score';
+            }
+        }
+
+        // Get user input for score and display the grade
+        let score = prompt("Enter the student's score (0-100):");
+        score = parseInt(score); // Convert input to an integer
+        let grade = getGrade(score); // Get the grade
+
+        console.log("The grade for a score of " + score + " is: " + grade);
+    </script>
+</body>
+</html>
